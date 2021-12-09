@@ -14,6 +14,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 	pid_t id = 0;
 	int status = 0;
 
+	signal(SIGINT, ctrolmasc);
 	while (1)
 	{
 		if ((int)p == -1)
