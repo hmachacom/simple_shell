@@ -30,12 +30,7 @@ int _excev(char tokens[1024][1024], char *dir)
 		if (execve(argv[0], argv, environ) == -1)
 		{
 			perror("Error");
-			/*freespp(argv);*/
-			/*freespp(tokens);*/
-			free(dir);
-			exit(127);
+			exit(2);
 		}
-/*	freespp(argv);*/
-	/*freespp(tokens);*/
 	return (-1);
 }
