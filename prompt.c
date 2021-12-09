@@ -26,7 +26,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 		p = getline(&buffer, &u, stdin);
 		if (strcmp(buffer, "exit\n") == 0)
 			break;
-		if (strcmp(buffer, "env\n") == 0)
+		/*if (strcmp(buffer, "env\n") == 0)
 		{
 			for (i = 0; environ[i]; i++)
 			{
@@ -34,7 +34,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 				write(STDOUT_FILENO, "\n", 2);
 			}
 			continue;
-		}
+		}*/
 		if ((int)p != -1)
 		{
 			if ((hijo(buffer, separador, tokens)) == 0)
