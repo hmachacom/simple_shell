@@ -23,7 +23,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 		if (p == 1)
 			write(STDOUT_FILENO, prompt, 2);
 		initializerArry(tokens);
-		p = getline(&buffer, &u, stdin);
+		p = _getline(&buffer, &u);
 		if (strcmp(buffer, "exit\n") == 0)
 			break;
 		if ((int)p != -1)
