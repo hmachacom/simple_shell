@@ -16,7 +16,7 @@ int searchPath(char path[1024])
 		sharePtha[i] = '\0';
 	if (!environ)
 	{
-		return (-1);
+		exit(0);
 	}
 	for (recorer = 0; environ[recorer]; recorer++)
 	{
