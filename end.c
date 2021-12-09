@@ -8,7 +8,6 @@
  */
 void end(char **tokens, char *buffer, char **path)
 {
-	write(STDOUT_FILENO, "\n", 1);
 	freespp(tokens);
 	free(buffer);
 	freespp(path);

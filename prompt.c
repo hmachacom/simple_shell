@@ -22,6 +22,8 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 		if (p == 1)
 			write(STDOUT_FILENO, prompt, 2);
 		p = getline(&buffer, &u, stdin);
+		if (!(strcmp(buffer, "exit\n")))
+			exit(0);
 		if ((int)p != -1)
 		{
 			if ((hijo(buffer, separador, tokens)) == 0)
