@@ -11,6 +11,7 @@
 int shel2(char *path, char tok[10254][1024], char *di, char *av, pid_t id)
 {
 	int status = 0;
+
 	if ((searchPath(path)) == 0)
 	{
 		if ((searchDir(path, tok, di)) == -1)

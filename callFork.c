@@ -18,7 +18,7 @@ int callfork(char *dir, char tokens[1024][1024], pid_t id)
 	else if (id > 0)
 	{
 		wait(&status);
-		return(WEXITSTATUS(status));
+		return (WEXITSTATUS(status));
 	}
 	else
 	{
@@ -27,12 +27,13 @@ int callfork(char *dir, char tokens[1024][1024], pid_t id)
 	return (0);
 }
 /**
- * ctrol - command ctrl+c
- * @number: flag signal
+ * ctrolmasc - command ctrl+c
+ * @charter: flag signal
  */
 void ctrolmasc(int charter __attribute__((unused)))
 {
 	char *prompt = "\n# ";
+
 	signal(SIGINT, ctrolmasc);
 	write(STDOUT_FILENO, prompt, 4);
 	fflush(stdout);
