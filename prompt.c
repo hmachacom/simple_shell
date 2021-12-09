@@ -12,11 +12,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 	const char *separador = " \t\n\"";
 	size_t u = 0, p = 1;
 	pid_t id = 0;
-<<<<<<< HEAD
 	int status = 0;
-=======
-	int status = 0;/*, i = 0;*/
->>>>>>> e72faea15b76904a27dd854a420156fad2587cf8
 
 	signal(SIGINT, ctrolmasc);
 	while (1)
