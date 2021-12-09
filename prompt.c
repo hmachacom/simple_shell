@@ -11,6 +11,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 	const char *separador = " \t\n\"";
 	size_t u = 0, p = 1;
 	pid_t id = 0;
+	int status = 0;
 
 	initializerArryPointer(path);
 	initializerArryPointer(tokens);
@@ -33,16 +34,17 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 					searchPath(path);
 					dir = searchDir(path, tokens);
 					if (!dir)
-						perror(tokens[0]);
+					{
+						perror(tokens[0]), status = 127;
+					}
 					else
 					{
-						callfork(path, dir, tokens, id);
+						status = 0, callfork(path, dir, tokens, id);
 					}
 				}
 			}
 		}
-
 	}
 	end(tokens, buffer, path);
-	return (0);
+	return (status);
 }

@@ -40,6 +40,5 @@ char *searchDir(char **path, char **tokens)
 		/*exceve va a la ruta para ejecutar el comando solicitado(token)*/
 	}
 	free(dir);
-	/*freespp(path);*/
 	return (NULL);
 }
