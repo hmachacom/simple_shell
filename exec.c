@@ -6,7 +6,7 @@
  *@dir:directory
  * Return: -1 in case of error.
  */
-int _excev(char **tokens, char *dir)
+int _excev(char tokens[1024][1024], char *dir)
 {
 	int i = 0, j = 0;
 	char *argv[1024];
@@ -19,14 +19,13 @@ int _excev(char **tokens, char *dir)
 	}
 	argv[0] = malloc(sizeof(char) * 1024);
 	strcpy(argv[0], dir);
-	free(dir);
 	/*ciclo para agragar todos los parametros y argumentos a ejecutar*/
-	for (i = 1, j = 1; tokens[j]; i++, j++)
+	for (i = 1, j = 0; tokens[i][j]; i++, j++)
 	{
 		argv[i] = malloc(sizeof(char) * 1024);
-		strcpy(argv[i], tokens[j]);
+		strcpy(argv[i], tokens[i]);
 	}
-	freespp(tokens);
+
 	/*exceve va a la ruta para ejecutar el comando solicitado(token)*/
 		if (execve(argv[0], argv, environ) == -1)
 		{

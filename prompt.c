@@ -7,14 +7,13 @@
  */
 int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 {
-	char *prompt = "# ", *buffer = NULL, *tokens[1024], *path[1024], *dir = NULL;
+	char *prompt = "# ", *buffer = NULL, tokens[1024][1024];
+	char path[1024], dir[1024]/*, *ar = av[0]*/;
 	const char *separador = " \t\n\"";
 	size_t u = 0, p = 1;
 	pid_t id = 0;
 	int status = 0;
 
-	initializerArryPointer(path);
-	initializerArryPointer(tokens);
 	while (1)
 	{
 		if ((int)p == -1)
@@ -22,29 +21,19 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 		p = isatty(STDIN_FILENO);
 		if (p == 1)
 			write(STDOUT_FILENO, prompt, 2);
+		initializerArry(tokens);
 		p = getline(&buffer, &u, stdin);
-		if (!(strcmp(buffer, "exit\n")))
-			exit(0);
 		if ((int)p != -1)
 		{
 			if ((hijo(buffer, separador, tokens)) == 0)
 			{
 				if (tokens[0])
 				{
-					searchPath(path);
-					dir = searchDir(path, tokens);
-					if (!dir)
-					{
-						perror(tokens[0]), status = 127;
-					}
-					else
-					{
-						status = 0, callfork(path, dir, tokens, id);
-					}
+					status = shel2(path, tokens, dir, av[0], id);
 				}
 			}
 		}
 	}
-	end(tokens, buffer, path);
+	free(buffer);
 	return (status);
 }

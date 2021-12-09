@@ -4,10 +4,10 @@
  *@path: patrh
  * Return: path.
  */
-int searchPath(char **path)
+int searchPath(char path[1024])
 {
-	int comp = 0, lon = 0, recorer = 0, smaloc = 0;
-	char *cpyen, *tmp;
+	int comp = 0/*, lon = 0*/, recorer = 0/*, smaloc = 0*/;
+/*char cpyen[1024],**tmp;*/
 	char sharePtha[6];
 	char *pt = "PATH=";
 	int i;
@@ -27,22 +27,9 @@ int searchPath(char **path)
 			break;
 		}
 	}
-	comp = strcmp(sharePtha, pt);
-	cpyen = environ[recorer];
-	tmp = strtok(cpyen, "'=':");
+	if ((strcmp(sharePtha, pt)) != 0)
+		return (-1);
+	strcpy(path, environ[recorer]);
 
-	while (tmp)
-	{
-		lon = strlen(tmp) + 1;
-		path[smaloc] = malloc(sizeof(char) * lon);
-		strcpy(path[smaloc], tmp);
-		smaloc++;
-		tmp = strtok(NULL, ":");
-		if (tmp)
-		{
-			lon = strlen(tmp);
-			path[smaloc] = malloc(sizeof(char) * lon + 1);
-		}
-	}
 	return (0);
 }
