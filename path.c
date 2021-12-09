@@ -14,10 +14,6 @@ int searchPath(char path[1024])
 
 	for (i = 0; i < 6; i++)
 		sharePtha[i] = '\0';
-	if (!environ)
-	{
-		exit(0);
-	}
 	for (recorer = 0; environ[recorer]; recorer++)
 	{
 		strncpy(sharePtha, environ[recorer], 5);
