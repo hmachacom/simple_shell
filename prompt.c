@@ -33,8 +33,9 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 				write(STDOUT_FILENO, environ[i], strlen(environ[i]));
 				write(STDOUT_FILENO, "\n", 2);
 			}
+			continue;
 		}
-		else if ((int)p != -1)
+		if ((int)p != -1)
 		{
 			if ((hijo(buffer, separador, tokens)) == 0)
 			{
