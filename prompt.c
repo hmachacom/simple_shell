@@ -40,9 +40,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 			if ((hijo(buffer, separador, tokens)) == 0)
 			{
 				if (tokens[0])
-				{
 					status = shel2(path, tokens, dir, av[0], id);
-				}
 			}
 		}
 	}
