@@ -27,6 +27,7 @@ int searchPath(char **path)
 			break;
 		}
 	}
+	comp = strcmp(sharePtha, pt);
 	cpyen = environ[recorer];
 	tmp = strtok(cpyen, "'=':");
 
