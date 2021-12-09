@@ -12,8 +12,9 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 	const char *separador = " \t\n\"";
 	size_t u = 0, p = 1;
 	pid_t id = 0;
-	int status = 0;
+	int status = 0, i = 0;
 
+	signal(SIGINT, ctrolmasc);
 	while (1)
 	{
 		if ((int)p == -1)
@@ -23,7 +24,18 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 			write(STDOUT_FILENO, prompt, 2);
 		initializerArry(tokens);
 		p = getline(&buffer, &u, stdin);
-		if ((int)p != -1)
+		if (strcmp(buffer, "exit\n") == 0)
+			break;
+		if (strcmp(buffer, "env\n") == 0)
+		{
+			for (i = 0; environ[i]; i++)
+			{
+				write(STDOUT_FILENO, environ[i], strlen(environ[i]));
+				write(STDOUT_FILENO, "\n", 2);
+				continue;
+			}
+		}
+		else if ((int)p != -1)
 		{
 			if ((hijo(buffer, separador, tokens)) == 0)
 			{
