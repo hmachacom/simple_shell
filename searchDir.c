@@ -5,9 +5,9 @@
  *@tokens:-token
  * Return: execution path.
  */
-char  *searchDir(char **path, char **tokens)
+char *searchDir(char **path, char **tokens)
 {
-	int iterador = 0, j = 0,i;
+	int iterador = 0, j = 0;
 	char *dir = malloc(sizeof(char) * 1024);
 	struct stat st;
 
@@ -16,23 +16,16 @@ char  *searchDir(char **path, char **tokens)
 		free(dir);
 		return (NULL);
 	}
-	for (i = 0; tokens[i]; i++)
-	while (path[iterador])
+	for (iterador = 0; path[iterador]; iterador++)
 	{
 		strcpy(dir, path[iterador]);
-		j = 0;
-		while (tokens[j])
+		for (j = 0; tokens[j]; j++)
 		{
 			strcat(dir, "/");
 			strcat(dir, tokens[0]);
 			if (stat(dir, &st) == 0)
-			{
 				return (dir);
-			/*exceve va a la ruta para ejecutar el comando solicitado(token)*/
-			}
-			j++;
 		}
-		iterador++;
 	}
 	free(dir);
 	dir = malloc(sizeof(char) * 1024);

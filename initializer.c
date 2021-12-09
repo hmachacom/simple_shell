@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * freespp - free pointer
- *@_freess:string dest
+ * initializerArryPointer - free pointer
+ *@pointer:string dest
  * Return: void.
  */
 

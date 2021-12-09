@@ -3,6 +3,7 @@
  * hijo - create a list of tokens
  *@buffer:-buffer
  *@separador:-token
+ *@tokens:toke
  * Return: 0.
  */
 int hijo(char *buffer, const char *separador, char **tokens)
@@ -31,6 +32,6 @@ int hijo(char *buffer, const char *separador, char **tokens)
 			tokens[cont] = malloc(sizeof(char) * lon + 1);
 		}
 	}
-	
+
 	return (0);
 }

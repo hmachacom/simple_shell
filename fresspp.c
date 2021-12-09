@@ -2,7 +2,7 @@
 
 /**
  * freespp - free pointer
- *@_freess:string dest
+ *@freess:-string dest
  * Return: void.
  */
 void freespp(char **freess)
