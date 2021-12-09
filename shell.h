@@ -20,7 +20,8 @@ void frees(char *);
 void inicializar(char **tokes, int size);
 void initializerArryPointer(char **);
 void end(char **, char*, char **);
-void callfork(char *dir, char tokens[1024][1024], pid_t id);
+int callfork(char *dir, char tokens[1024][1024], pid_t id);
 void initializerArry(char arr[1024][1024]);
 int shel2(char *path, char tok[10254][1024], char *di, char *av, pid_t id);
+void ctrolmasc(int charter __attribute__((unused)));
 #endif
