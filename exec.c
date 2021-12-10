@@ -14,8 +14,7 @@ int _excev(char tokens[1024][1024], char *dir)
 	initializerArryPointer(argv);
 	if (!dir || !tokens)
 	{
-		perror(tokens[0]);
-		exit(127);
+		exit(2);
 	}
 	argv[0] = malloc(sizeof(char) * 1024);
 	_strcpy(argv[0], dir);
