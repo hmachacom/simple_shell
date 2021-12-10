@@ -90,7 +90,7 @@ $ echo \[lq]/bin/ls\[rq] | ./hsh
 .PP
 $ cat test_ls_2 | ./hsh
 .PP
-$ echo \[lq]qwerty\[rq] | ./hsh //Generates error
+$ echo \[lq]qwerty\[rq] | ./hsh // error
 .SH EXAMPLE OF ERRORS
 .PP
 $ ls k ls: cannot access `k': No such file or directory
@@ -115,7 +115,7 @@ Full documentation at: <https://github.com/hmachacom/simple_shell>
 .IP
 .nf
 \f[C]
-No known bugs.
+No bugs.
 \f[R]
 .fi
 .SH NOTES
@@ -142,6 +142,6 @@ Hugo Machacon
 .nf
 \f[C]
 Copyright\[at]2021 Holberton School, student project with review free.
-\[dq]This project was achieved with a lot of commitment and perseverance\[dq]
+\[dq]finally shell\[dq]
 \f[R]
 .fi
