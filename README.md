@@ -53,7 +53,11 @@ The purpouse of this prroject is to Write a simple UNIX command interpreter.
 | exec.c   | Look for the command in the path and execute it if this command exists  |
 |  path.c |  this function looks for the path in the environ and returns it |
 | searchDir  |   looks for the command in all the directories of the path  |
-| shel.h   |   contains all libraries and prototypes of all functions |
+| shell.h   |   contains all libraries and prototypes of all functions |
+|  shel2.c          |   contains the continuation of the main function     |
+| intializerarr.c |   initializes all positions of a two-dimensional array to the null character |
+|callFork.c | call child process |
+
 
 ------------
 

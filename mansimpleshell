@@ -30,9 +30,9 @@ hsh
 #include <sys/time.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#define PROMPT \[dq]$ \[dq]
-#define DELIM \[dq] \[dq]
-#define DELIM2 \[dq]:\[dq]
+#ifndef SHELL_H
+#define SHELL_H
+#endif
 extern char **environ;
 \f[R]
 .fi
@@ -62,7 +62,7 @@ searchings that did the user just as the shell does.
 .IP
 .nf
 \f[C]
-Exit the shell (similar to \[dq]ctrl + d\[dq])
+Exit the shell (similar to \[dq]ctrl + d\[dq] or write \[dq]exit\[dq])
 \f[R]
 .fi
 .SS Env
@@ -76,13 +76,13 @@ Prints the environment variables
 .SS Inputs
 .SS Interactive mode
 .PP
-$ ls \-la
+# ls \-la
 .PP
-$ /bin/ls
+# /bin/ls
 .PP
-$ pwd
+# pwd
 .PP
-$ cat text_file
+# cat text_file
 .SS Inputs
 .SS Non\-Interactive mode
 .PP
@@ -90,12 +90,12 @@ $ echo \[lq]/bin/ls\[rq] | ./hsh
 .PP
 $ cat test_ls_2 | ./hsh
 .PP
-$ echo \[lq]qwerty\[rq] | ./hsh // error
+$ echo \[lq]aejkf\[rq] | ./hsh // error
 .SH EXAMPLE OF ERRORS
 .PP
-$ ls k ls: cannot access `k': No such file or directory
+# ls k ls: cannot access `k': No such file or directory
 .PP
-$ QUERTY sh : 2: QUERTY: not found
+# QUERTY sh : 2: QUERTY: not found
 .SH SEE ALSO
 .IP
 .nf
