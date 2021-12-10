@@ -25,4 +25,7 @@ void initializerArry(char arr[1024][1024]);
 int shel2(char *path, char tok[10254][1024], char *di, char *av, pid_t id);
 void ctrolmasc(int charter __attribute__((unused)));
 size_t _getline(char **buffer, size_t *u);
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
 #endif
