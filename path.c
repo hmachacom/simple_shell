@@ -16,16 +16,16 @@ int searchPath(char path[1024])
 		sharePtha[i] = '\0';
 	for (recorer = 0; environ[recorer]; recorer++)
 	{
-		strncpy(sharePtha, environ[recorer], 5);
-		comp = strcmp(sharePtha, pt);
+		_strncpy(sharePtha, environ[recorer], 5);
+		comp = _strcmp(sharePtha, pt);
 		if (comp == 0)
 		{
 			break;
 		}
 	}
-	if ((strcmp(sharePtha, pt)) != 0)
+	if ((_strcmp(sharePtha, pt)) != 0)
 		return (-1);
-	strcpy(path, environ[recorer]);
+	_strcpy(path, environ[recorer]);
 
 	return (0);
 }

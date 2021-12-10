@@ -20,7 +20,7 @@ int hijo(char *buffer, const char *separador, char tokens[1024][1024])
 		return (-1);
 	while (token)
 	{
-		strcpy(tokens[cont], token);
+		_strcpy(tokens[cont], token);
 		token = _strtock(NULL, separador);
 		cont++;
 	}

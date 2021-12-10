@@ -18,12 +18,12 @@ int _excev(char tokens[1024][1024], char *dir)
 		exit(127);
 	}
 	argv[0] = malloc(sizeof(char) * 1024);
-	strcpy(argv[0], dir);
+	_strcpy(argv[0], dir);
 	/*ciclo para agragar todos los parametros y argumentos a ejecutar*/
 	for (i = 1, j = 0; tokens[i][j]; i++, j++)
 	{
 		argv[i] = malloc(sizeof(char) * 1024);
-		strcpy(argv[i], tokens[i]);
+		_strcpy(argv[i], tokens[i]);
 	}
 
 	/*exceve va a la ruta para ejecutar el comando solicitado(token)*/

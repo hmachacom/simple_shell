@@ -18,11 +18,11 @@ int searchDir(char path[1024], char tokens[10241][1024], char dir[1024])
 	}
 	initializerArry(pathtok);
 	hijo(path, "=:", pathtok);
-	if (strcmp(pathtok[0], "PATH="))
+	if (_strcmp(pathtok[0], "PATH="))
 	{
 		for (iterador = 0, i = 0; pathtok[iterador][i]; i++, iterador++)
 		{
-			strcpy(dir, pathtok[iterador]);
+			_strcpy(dir, pathtok[iterador]);
 			for (j = 0, l = 0; tokens[j][l]; l++, j++)
 			{
 				strcat(dir, "/");
@@ -31,7 +31,7 @@ int searchDir(char path[1024], char tokens[10241][1024], char dir[1024])
 					return (0);
 			}
 		}
-		strcpy(dir, tokens[0]);
+		_strcpy(dir, tokens[0]);
 		/*
 	*cree una copia de tokens en
 	*la posicion 0 para evaluar con el if si el comando se podia ejecutar

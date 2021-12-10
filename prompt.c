@@ -24,7 +24,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 			write(STDOUT_FILENO, prompt, 2);
 		initializerArry(tokens);
 		p = _getline(&buffer, &u);
-		if (strcmp(buffer, "exit\n") == 0)
+		if (_strcmp(buffer, "exit\n") == 0)
 			break;
 		if ((int)p != -1)
 		{
