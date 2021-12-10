@@ -1,21 +1,21 @@
  # Simple_shell.
 
-## #AUTHORS.
+## AUTHORS.
 
 ### Hugo Machacon
 
 ------------
-Git: https://github.com/hmachacom
-Twitter: https://twitter.com/hmachacom
-Linkedin: 
+- Git: https://github.com/hmachacom
+- Twitter: https://twitter.com/hmachacom
+- Linkedin: 
 
 ------------
 ### Carlos Pardo
 
 ------------
-Git: https://github.com/ANDRES3021
-Twitter: https://twitter.com/CarlosA54648157
-Linkedin: https://www.linkedin.com/in/carlos-andres-pardo-rodriguez-8bbb90202/
+- Git: https://github.com/ANDRES3021
+- Twitter: https://twitter.com/CarlosA54648157
+- Linkedin: https://www.linkedin.com/in/carlos-andres-pardo-rodriguez-8bbb90202/
 
 ------------
 
@@ -66,17 +66,17 @@ The purpouse of this prroject is to Write a simple UNIX command interpreter.
 
 ------------
 
-### ls :
-
+### ls - la:
+[![ls -la](https://i.imgur.com/CVUdjxp.png "ls -la")](https://imgur.com/CVUdjxp "ls -la")
 
 ------------
 
 ### /bin/ls:
-
+[![/bin/ls](https://i.imgur.com/prIHznB.png "/bin/ls")](https://imgur.com/prIHznB "/bin/ls")
 ------------
 
 ### pwd:
-
+[![pwd](https://i.imgur.com/6sjbEQq.png "pwd")](https://imgur.com/6sjbEQq "pwd")
 ------------
 ## Special commands:
 
@@ -89,4 +89,4 @@ Ctrl + C : To prevent the shell from closing.
 ## Flowchart
 
 ------------
-
+[![FLOWCHART](https://i.imgur.com/p9AP2ti.jpg "FLOWCHART")](https://imgur.com/a/pffxWhF "FLOWCHART")
